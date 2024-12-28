@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in page</title>
+    <link  href="\static\style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <div class="button">
+            <button><a href="{{'about' }}"> ABOUT US  </a></button>
+            <button><a href="{{'index' }}"> HOME PAGE  </a></button>
+               
+    </div>
+
+     </header>
+     <main>
+        <div class="head"> Addmission Form </div>
+        <form>
+            <div class>
+            <fieldset>
+                <legend style="font-weight: bold;
+                font-size: larger;
+                color: rgb(13, 13, 72);">PERSONAL INFORMATION</legend>
+            <!--name-->
+            <label for="name">Name</label><br>
+             <input type="text" placeholdder="Your Name Here" required>
+            <!--email-->
+            <br><br>
+            <label for="email">Email</label><br>
+             <input type="email" placeholdder="Your Email Here" required>
+             <!--password-->
+             <br><br>
+             <label for="pass">Password</label><br>
+             <input type="password" placeholdder="Your Password Here" required>
+             <!--contact-->
+             <br><br>
+             <label for="number">Contact Number</label><br>
+             <input type="number" placeholdder="Your Contact Number Here" required>
+             
+            </fieldset>
+            <br><br>
+            <label for="gender">Gender</label><br>
+             <input type="radio" name="gender" value="M">
+             <label for="M">Male</label>
+             <input type="radio" name="gender" value="Fm">
+             <label for="Fm">Female </label>
+             <br><br>
+                <button><a type="savedata">Log in</a></button>
+                <button><a type="reset">Reset</a></button>
+        </form>
+</body>
+<footer>
+    <div class="contactinfo">    
+     <p>Email:Mygym@example.com<br>
+        Contact:0312-34567890
+    </div> 
+</footer>
+</html>
