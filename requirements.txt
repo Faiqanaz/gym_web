@@ -1,2 +1,2 @@
 Flask
-render_templates
+render_template
