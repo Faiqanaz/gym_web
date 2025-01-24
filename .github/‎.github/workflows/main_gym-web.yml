@@ -1,0 +1,26 @@
+name: Deploy to Azure
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+         client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_4E746061C1644417B3A3646732D355F0 }}
+         tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_B9005449F5E44F66BCFC171B4887AF86 }}
+         subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_4A3C00F91107403CB2FE0B07F910DB93 }}
+
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: GymWebApp
+          package: .
